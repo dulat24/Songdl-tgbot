@@ -9,7 +9,7 @@
         "JE Bots"
     ],
     "website": "https://infinityje.com",
-    "repository": "https://github.com/ImJanindu/Songdl-tgbot",
+    "repository": "https://github.com/dulat24/Songdl-tgbot",
     "success_url": "https://t.me/Infinity_BOTs",
     "env": {
         "TG_BOT_TOKEN": {
