@@ -1,4 +1,4 @@
-#    Copyright (c) 2021 Infinity BOTs <https://t.me/Infinity_BOTs>
+#    Copyright (c) 2021 Infinity BOTs <https://t.me/Music7171_bot>
  
 #    This program is free software: you can redistribute it and/or modify  
 #    it under the terms of the GNU General Public License as published by  
@@ -81,12 +81,12 @@ async def song(client, message):
     #if args.startswith("/help"):
         #return ""    
     status = await message.reply(
-             text="<b>Downloading your song, Plz wait 🥺\n\nMade by @Infinity_BOTs 🇱🇰</b>",
+             text="<b>Загружая вашу песню, пожалуйста, подождите 🙁\n\n🛠Made by @He11oWorld</b>",
              disable_web_page_preview=True,
                         reply_markup=InlineKeyboardMarkup(
                             [[
                                     InlineKeyboardButton(
-                                        "Developer", url="https://t.me/ImJanindu")
+                                        "Developer", url="https://t.me/He11oWorld")
                                 ]]
                         ),
                parse_mode="html",
@@ -94,14 +94,14 @@ async def song(client, message):
       )
     video_link = yt_search(args)
     if not video_link:
-        await status.edit("<b>Song not found 😑</b>")
+        await status.edit("<b>Песня не найдена 😑</b>")
         return ""
     yt = YouTube(video_link)
     audio = yt.streams.filter(only_audio=True).first()
     try:
         download = audio.download(filename=f"{str(user_id)}")
     except Exception as ex:
-        await status.edit("<b>Failed to download song 🤕</b>")
+        await status.edit("<b>Ошибка при скачивании песни 🤕</b>")
         LOGGER.error(ex)
         return ""
     os.rename(download, f"{str(user_id)}.mp3")
@@ -125,15 +125,15 @@ async def song(client, message):
     user_id = message.from_user["id"]
     args = get_arg(message) + " " + "song"
     if args.startswith(" "):
-        await message.reply("<b>Enter a song name❗\n\nExample: `/s guleba`</b>")
+        await message.reply("<b>Введите название песни❗ \n\nПример: `/s Новый Мерин`</b>")
         return ""
     status = await message.reply(
-             text="<b>Downloading your song, Plz wait 🥺\n\nMade by @Infinity_BOTs 🇱🇰</b>",
+             text="<b>При загрузке вашей песни, пжлст подождите. 🥺\n\n🛠Made by @He11oWorld</b>",
              disable_web_page_preview=True,
                         reply_markup=InlineKeyboardMarkup(
                             [[
                                     InlineKeyboardButton(
-                                        "Developer", url="https://t.me/ImJanindu")
+                                        "Developer", url="https://t.me/He11oWorld")
                                 ]]
                         ),
                parse_mode="html",
@@ -141,14 +141,14 @@ async def song(client, message):
       )
     video_link = yt_search(args)
     if not video_link:
-        await status.edit("<b>Song not found 😑</b>")
+        await status.edit("<b>Песня не найдено 😑</b>")
         return ""
     yt = YouTube(video_link)
     audio = yt.streams.filter(only_audio=True).first()
     try:
         download = audio.download(filename=f"{str(user_id)}")
     except Exception as ex:
-        await status.edit("<b>Failed to download song 🤕</b>")
+        await status.edit("<b>Ошибка при скачивании песни 🤕</b>")
         LOGGER.error(ex)
         return ""
     os.rename(download, f"{str(user_id)}.mp3")
@@ -169,17 +169,17 @@ async def start(client, message):
    if message.chat.type == 'private':
        await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>Hey There, I'm a Song Downloader Bot
+               text="""<b>Привет, я бот-загрузчик песен
 
-Made by @ImJanindu 🇱🇰
+Made by @He11oWorld 🇱🇰
 
-Hit help button to find out more about how to use me</b>""",   
+Нажмите кнопку справки, чтобы узнать больше о том, как использовать меня</b>""",   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
                                             "Help", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "Channel", url="https://t.me/Infinity_BOTs")
+                                            "Channel", url="https://t.me/YT_MR_ROBOT")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -190,7 +190,7 @@ Hit help button to find out more about how to use me</b>""",
 
        await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>Song Downloader Online\n\n</b>""",   
+               text="""<b>Загрузчик Песен Онлайн\n\n</b>""",   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
@@ -210,7 +210,7 @@ async def help(client, message):
                chat_id=message.chat.id,
                text="""<b>Send a song name to download song
 
-~ @Infinity_BOTs</b>""",
+~ @He11oWorld</b>""",
             reply_to_message_id=message.message_id
         )
     else:
@@ -232,7 +232,7 @@ print(
     """
 Bot Started!
 
-Join @Infinity_BOTs
+Join @He11oWorld
 """
 )
 
